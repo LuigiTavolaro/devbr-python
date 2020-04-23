@@ -21,7 +21,7 @@ def after_request(response):
 
 @app.route('/')
 def home():
-  return '<a href="/factor_raw/100"> click here for an example</a>'
+  return '<a href="/factor_raw/100"> clique aqui para um exemplo</a>'
   
 @app.route('/factor_raw/<int:n>')
 def factors_display_raw_html(n):

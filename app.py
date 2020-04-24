@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, Response
-from applicationinsights.flask.ext import AppInsights
+#from applicationinsights.flask.ext import AppInsights
 
 app = Flask(__name__)
-app.config['APPINSIGHTS_INSTRUMENTATIONKEY'] = 'e6d450e4-8fc3-4084-a16b-7bd798c6fd0e'
-appinsights = AppInsights(app)
+#app.config['APPINSIGHTS_INSTRUMENTATIONKEY'] = 'e6d450e4-8fc3-4084-a16b-7bd798c6fd0e'
+#appinsights = AppInsights(app)
 
 
 def factors(num):
@@ -21,7 +21,7 @@ def after_request(response):
 
 @app.route('/')
 def home():
-  return '<a href="/factor_raw/100"> clique aqui para um exemplo teste</a>'
+  return '<a href="/factor_raw/100"> clique aqui para um exemplo teste 123</a>'
   
 @app.route('/factor_raw/<int:n>')
 def factors_display_raw_html(n):
